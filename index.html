@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Contador De Caracteres</title>
+  <link rel="shorcut icon" href="https://media.discordapp.net/attachments/768282134564569090/888860321303896154/IMG_20210918_155312.png">
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .fundo {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    background: linear-gradient(chartreuse, black);
+  }
+  
+  .seutextobox {
+    color: white;
+    border: 3px solid white;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    transition: 0.2s;
+  }
+  
+  .seutextobox:hover {
+    width: 310px;
+    height: 310px;
+  }
+  
+  .btn {
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 30px;
+    border: 0;
+    border: 3px solid white;
+    color: white;
+    font-weight: bold;
+    outline: none;
+    padding: 1.25em 2em;
+    position: relative;
+    text-transform: uppercase;
+    text-style: preserve-3d;
+    transition: 0.2s;
+  }
+  
+  .btn:hover {
+    cursor: pointer;
+    background-color: chartreuse;
+    padding: 1.4em 2.2em;
+  }
+  
+  .textquantity {
+    font-weight: bold;
+    color: white;
+  }
+  </style>
+</head>
+<body>
+  <div class="fundo"><div align="center"><br><img src="https://media.discordapp.net/attachments/768282134564569090/888858307152973874/image105.png" style="width: 90%"><br><br><textarea class="seutextobox" placeholder="Seu texto aqui ..." id="seutexto"></textarea>
+    <br><button class="btn" onclick="executecont()">CONTAR</button>
+    <br><br><p id="quantidadedeletras" class="textquantity"></p></div></div>
+</body>
+<script type="text/javascript">
+var qualseutexto = '';
+var quantidadedeletrasdoseutexto = 0;
+function executecont () {
+  qualseutexto = document.getElementById('seutexto').value;
+  quantidadedeletrasdoseutexto = qualseutexto.length;
+  document.getElementById('quantidadedeletras').innerHTML = 'A QUANTIDADE DE LETRAS É : ' + quantidadedeletrasdoseutexto;
+};
+</script>
+</html>
